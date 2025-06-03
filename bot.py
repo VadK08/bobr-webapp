@@ -23,7 +23,7 @@ async def start_handler(message: types.Message):
         inline_keyboard=[
             [InlineKeyboardButton(
                 text="🚀 Запустить Bobr.dev",
-                web_app=WebAppInfo(url="https://empty-cats-matter.loca.lt")  # твой URL
+                web_app=WebAppInfo(url="https://bobr-dev.onrender.com")  # твой URL
             )]
         ]
     )
