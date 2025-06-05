@@ -1,11 +1,15 @@
 import asyncio
+import os
 from aiogram import Bot, Dispatcher, Router, types
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
 from aiogram.filters import Command
 
-API_TOKEN = "7747183387:AAHCTKaj905Q9-Qvygui7h503jzpkbjb7Sg"
+# Telegram API token must be provided via environment variable
+API_TOKEN = os.getenv("API_TOKEN")
+if not API_TOKEN:
+    raise RuntimeError("API_TOKEN environment variable is not set")
 
 # Инициализация бота и диспетчера
 bot = Bot(
